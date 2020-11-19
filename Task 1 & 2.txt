@@ -1,0 +1,242 @@
+                                                                                                                                                       <<<< Task 1 >>>>
+
+//Q1  Answer
+
+import java.util.Scanner;
+
+public class FirstJavaProject {
+	
+    public static void main(String[] args) {
+		
+      Scanner takeinput = new Scanner(System.in);
+      System.out.print("please enter your name: ");
+      String userInput = takeinput.next();
+      System.out.print("Welcome in Java "+ userInput);
+    
+    }   
+}
+----------------------------
+//Q2 Answer
+
+import java.util.Scanner;
+
+public class UserData {
+	
+	public static void main(String[] args) {
+		
+	      Scanner takeinput = new Scanner(System.in);
+	      System.out.println("please enter your name: ");
+	      String userInput = takeinput.next();
+	      System.out.println("Your name is "+ userInput);	
+	      
+	      Scanner takeinput1 = new Scanner(System.in);
+	      System.out.println("please enter your age: ");
+	      String userInput1 = takeinput.next();
+	      System.out.println("Your age is  "+ userInput1);
+	      
+	      Scanner takeinput2 = new Scanner(System.in);
+	      System.out.println("please enter your E-mail: ");
+	      String userInput2 = takeinput.next();
+	      System.out.println("Your E-mail is  "+ userInput2);
+	      
+	      Scanner takeinput3 = new Scanner(System.in);
+	      System.out.println("please enter your faculty: ");	             
+	      String userInput3 = takeinput.next();
+	      System.out.println("Your faculty is "+ userInput3);
+	}
+
+}
+
+//Q3 Answer
+
+import java.util.Scanner;
+
+public class PrintData {
+	
+	public static void PrintData(){
+		String name, email, faculty;
+		int age;
+		System.out.println("Please enter your name: ");
+		Scanner takeinput = new Scanner(System.in);
+		String userInput = takeinput.next();
+		
+		System.out.println("Please enter your age: ");
+		Scanner takeinput1 = new Scanner(System.in);
+		String userInput1 = takeinput.next();
+		
+		System.out.println("Please enter your email: ");		
+		Scanner takeinput2 = new Scanner(System.in);
+		String userInput2 = takeinput.next();
+		
+		System.out.println("Please enter your faculty: ");			
+		Scanner takeinput3 = new Scanner(System.in);
+		String userInput3 = takeinput.next();		
+		
+	}
+	public static void main(String[] args) {
+
+		PrintData();		
+		
+			}
+}
+
+//Q4 Answer
+
+public class DrawHome {
+	public static void main(String[] args) {
+		 
+		System.out.println("    /\\   ");
+		System.out.println("   /  \\");
+		System.out.println("  /    \\");
+		System.out.println(" /______\\");
+		System.out.println("/ __     \\");		
+		System.out.println("||__|    |");
+		System.out.println("|     __ |");
+		System.out.println("|    |__||");
+		System.out.println("|    __  |");
+		System.out.println("|   |  | |");
+		System.out.println("|___|__|_|");
+		
+	}
+
+}
+ 
+                                                                                                                                                          <<<< Task 2 >>>>
+
+//Q1
+
+
+public class ArithmeticOperators {
+	
+	public static void main(String[] args) {
+		
+		int numberOne = 10;
+		int numberTwo = 4;
+		
+		int addition = numberOne + numberTwo;
+		int subtract = numberOne - numberTwo;
+		int multiply = numberOne * numberTwo;
+		int division = numberOne / numberTwo;
+		int moduls = numberOne % numberTwo;
+		
+		System.out.println("The result of addition is: "+addition);
+		System.out.println("The result of substraction is: "+subtract);
+		System.out.println("The result of multiplication is: "+multiply);
+		System.out.println("The result of division is: "+division);
+		System.out.println("The result of modulation is: "+moduls);
+					
+	}
+	
+}
+
+//Q2
+
+
+public class RelationalOperators {
+	
+	public static void main(String[] args) {
+		
+		int x = 5;
+		int y = 10;
+		
+		boolean result =  x > y;
+		System.out.println("x > y is "+result);		
+		
+		result =  x >= y;
+		System.out.println("x >= y is "+result);
+		
+		result =  x <= y;
+		System.out.println("x <= y is "+result);
+		
+		result =  x < y;
+		System.out.println("x < y is "+result);
+
+		result =  x == y;
+		System.out.println("x == y is "+result);
+
+		result =  x != y;
+		System.out.println("x != y is "+result);
+	
+	}
+
+}
+
+
+//Q3
+
+
+public class AssignmentOperator {
+	
+	public static void main(String[] args) {
+		
+		int x = 10;
+		int y = 20;
+		
+		x+= y;
+		System.out.println(x);
+		
+		x = 10;
+		y = 20;
+		
+		y -= x;
+		System.out.println(y);
+		
+		x = 10;
+		y = 20;
+		
+		y *= x;
+		System.out.println(y);
+		
+		x = 10;
+		y = 20;
+		
+		y /= x;
+		System.out.println(y);
+		
+		x = 10;
+		y = 20;
+		
+		y %= x;
+		System.out.println(y);
+		
+		boolean z = true;
+		boolean r = false;
+				
+		r &= z;
+		System.out.println(r);
+		
+		z = true;
+	    r = false;
+		
+		z |= r;
+		System.out.println(z);
+				
+	}
+
+}
+
+//Q4
+
+
+import javax.swing.JOptionPane;
+
+public class JoptionPane {
+	
+	public static void main(String[] args) {
+		
+		String input = JOptionPane.showInputDialog("Please enter your name: ");
+		JOptionPane.showMessageDialog(null, "Your name is: "+input);
+		
+		String input1 = JOptionPane.showInputDialog("Please enter your age: ");
+		JOptionPane.showMessageDialog(null, "Your age is: "+input1);
+		
+		String input2 = JOptionPane.showInputDialog("Please enter your email: ");
+		JOptionPane.showMessageDialog(null, "Your email is: "+input2);
+		
+		String input3 = JOptionPane.showInputDialog("Please enter your faculty: ");
+		JOptionPane.showMessageDialog(null, "Your name is: "+input3);
+		
+	}
+
+}
+
