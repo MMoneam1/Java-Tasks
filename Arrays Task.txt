@@ -1,0 +1,80 @@
+///Q1
+
+
+import java.io.FilterInputStream;
+import java.util.Scanner;
+
+public class NewArray {
+
+	static int[] myArray;
+
+	public static void main(String[] args) {
+		
+		int[] myArray = new int[5];
+
+		Scanner takeInput = new Scanner(System.in);
+		System.out.println("please Enter First Number: ");
+		int FirstNumber = takeInput.nextInt();
+
+		System.out.println("please Enter Second Number: ");
+		int SecondNumber = takeInput.nextInt();
+
+		System.out.println("please Enter Third Number: ");
+		int ThirdNumber = takeInput.nextInt();
+
+		System.out.println("please Enter Fourth Number: ");
+		int FourthNumber = takeInput.nextInt();
+
+		System.out.println("please Enter Fifth Number: ");
+		int FifthNumber = takeInput.nextInt();
+		
+		myArray[0] = FirstNumber;
+		myArray[1] = SecondNumber;
+		myArray[2] = ThirdNumber;
+		myArray[3] = FourthNumber;
+		myArray[4] = FifthNumber;
+
+		System.out.println("The first Number is: "+FirstNumber +"\n"+"The Second Number is: "+SecondNumber +"\n"+"The Third Number is: "+ThirdNumber +"\n"+"The Fourth number is: "+FourthNumber+"\n"+"The Fifth Numer is: "+FifthNumber);
+		
+
+	}
+}
+
+
+///Q2
+
+
+import java.util.jar.Attributes.Name;
+
+import javax.swing.JOptionPane;
+
+public class StudentData {
+
+	public String PrintData;
+
+	public static void main(String[] args) {
+
+		String input = JOptionPane.showInputDialog("Please Enter Your Name: ");
+		String input1 = JOptionPane.showInputDialog("Please Enter Your Age: ");
+		String input2 = JOptionPane.showInputDialog("Please Enter Your Email: ");
+		String input3 = JOptionPane.showInputDialog("Please Enter Your Faculty: ");
+
+		String[] myData;
+		myData = new String[4];
+
+		myData[0] = input;
+		myData[1] = input1;
+		myData[2] = input2;
+		myData[3] = input3;
+		System.out.print("Your Name is: " + myData[0] + "\n" + "Your Age is: " + myData[1] + "\n" + "Your Email is: "
+				+ myData[2] + "\n" + "Your Faculty is: " + myData[3]);
+
+	}
+
+	public String getStudentData() {
+		System.out.println();
+		return PrintData;
+
+	}
+
+}

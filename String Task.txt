@@ -1,0 +1,36 @@
+///Q1
+
+public class MyString {
+
+	public static void main(String[] args) {
+
+		String Value1 = "Mohamed";
+		String Value2 = "Ali";
+		boolean equal = Value1.equals(Value2);
+		System.out.print(equal);
+
+	}
+
+}
+
+///Q2
+
+
+import java.util.Scanner;
+
+public class MyString {
+
+	public static void main(String[] args) {
+
+		Scanner takeInput = new Scanner(System.in);
+		System.out.println("Please Enter First Value: ");
+		String firstValue = takeInput.nextLine();
+		System.out.println("Please Enter Second Value: ");
+		String secondValue = takeInput.nextLine();
+
+		boolean equal = firstValue.contains(secondValue);
+		System.out.println(equal);
+
+	}
+
+}

@@ -1,0 +1,222 @@
+///Q1
+
+import javax.swing.JOptionPane;
+
+public class StudentGrade {
+
+	public static void main(String[] args) {
+		
+		String input = JOptionPane.showInputDialog("Please Enter Your Grade ");
+		int StudentNumber = Integer.parseInt(input);
+		
+		if (StudentNumber >= 0 && StudentNumber <= 50)
+			JOptionPane.showMessageDialog(null, "Your Grade is (D)");
+		
+		else if (StudentNumber >= 50 && StudentNumber < 65)
+			JOptionPane.showMessageDialog(null, "Your Grade is (E)");
+		
+		else if (StudentNumber >=65  && StudentNumber < 75)
+			JOptionPane.showMessageDialog(null, "Your Grade is (C)");
+		
+		else if (StudentNumber >=75  && StudentNumber < 85)
+			JOptionPane.showMessageDialog(null, "Your Grade is (B)");
+		
+		else if (StudentNumber >=85  && StudentNumber < 100)
+			JOptionPane.showMessageDialog(null, "Your Grade is (A)");
+		
+		else 
+			JOptionPane.showMessageDialog(null, "Please Enter a valid Grade!!");
+			
+		
+	}
+
+}
+
+
+///Q2
+
+
+import javax.swing.JOptionPane;
+
+public class Switch {
+
+	public static void main(String[] args) {
+
+		String userInput = JOptionPane.showInputDialog("Please Enter Your Grade From A to E");
+	
+		switch (userInput) {
+		case "E":
+			JOptionPane.showMessageDialog(null, "Your Grade may be in range of 0 to 50");
+			break;
+
+		case "D":
+			JOptionPane.showMessageDialog(null, "Your Grade may be in range of 50 to 65");
+			break;
+
+		case "C":
+			JOptionPane.showMessageDialog(null, "Your Grade may be in range of 65 to 75");
+			break;
+
+		case "B":
+			JOptionPane.showMessageDialog(null, "Your Grade may be in range of 75 to 85");
+			break;
+
+		case "A":
+			JOptionPane.showMessageDialog(null, "Your Grade may be in range of 85 to 100");
+			break;
+
+		default:
+			JOptionPane.showMessageDialog(null, "Please Enter a Valid Grade");
+			break;
+
+		}
+	}
+
+}
+
+////Q3
+
+
+public class Loops {
+	
+            public static void main(String[] args) {
+            	
+           int number = 1;
+           int multiplier = 12;
+           
+           while (number <= 12) {
+        	   System.out.println(number+ " * "+multiplier+"  ="+(number * multiplier));
+        	   
+        	   number++;
+        	   
+           }
+	
+}
+
+}
+
+
+///Q4
+
+import java.io.FilterInputStream;
+import java.util.Scanner;
+
+public class newArr {
+
+	public static void main(String[] args) {
+
+		String[] myArray;
+
+		String[] myArray1 = new String[10];
+
+		Scanner takeInput = new Scanner(System.in);
+		System.out.println("Please Enter Your Name: ");
+		String FirstName = takeInput.next();
+
+		System.out.println("Please Enter Your Name: ");
+		String SecondName = takeInput.next();
+
+		System.out.println("Please Enter Your Name: ");
+		String ThirdName = takeInput.next();
+
+		System.out.println("Please Enter Your Name: ");
+		String FourthName = takeInput.next();
+
+		System.out.println("Please Enter Your Name: ");
+		String FifthName = takeInput.next();
+
+		System.out.println("Please Enter Your Name: ");
+		String SixthName = takeInput.next();
+
+		System.out.println("Please Enter Your Name: ");
+		String SeventhName = takeInput.next();
+
+		System.out.println("Please Enter Your Name: ");
+		String EighthName = takeInput.next();
+
+		System.out.println("Please Enter Your Name: ");
+		String NinethName = takeInput.next();
+
+		System.out.println("Please Enter Your Name: ");
+		String TenthName = takeInput.next();
+
+		for (String CustomerName : myArray1) {
+
+			System.out.println("The First User Name is: " + FirstName + "\n" + "The Second User Name is: " + SecondName
+					+ "\n" + "The Third User Name is: " + ThirdName + "\n" + "The Fourth User name is: " + FourthName
+					+ "\n" + "The Fifth User Name is: " + FifthName + "\n" + "The Sixth User Name is: " + SixthName
+					+ "\n" + "The Seventh User Name is: " + SeventhName + "\n" + "The Eighth User Name is: "
+					+ EighthName + "\n" + "The Nineth User Name is: " + NinethName + "\n" + "The Tenth User Name is: "
+					+ TenthName);
+
+			break;
+
+		}
+
+	}
+
+}
+
+/// Q5
+
+
+public class takeInput {
+
+	public static void main(String[] args) {
+
+		int average = 0;
+		int sum = 0;
+		int[] takeNumbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+		for (int input : takeNumbers) {
+
+			sum += input;
+			average = sum / input;
+
+			System.out.println(input);
+
+		}
+		System.out.println("Sum is : " + sum);
+		System.out.println("Average is : " + average);
+
+	}
+}
+
+/// Q6
+
+
+import java.io.StreamCorruptedException;
+import java.util.Scanner;
+
+public class userList {
+	
+	public static void main(String[] args) {
+		
+		Scanner list = new Scanner(System.in);
+		System.out.println("Please enter index length: ");
+		int arrayLength = list.nextInt();
+		
+		String[] index = new String [arrayLength];
+				
+		for (int i=0; i<arrayLength; i++) {
+			System.out.println("Please enter index element " +(i + 1));
+			index[i] = list.next();
+							
+		}
+		
+		System.out.println("Please enter the required element to be found");
+		String userInput =list.next();
+		
+		 for (int i = 0; i < arrayLength; i++)
+	      {
+		
+		if (index[i] == userInput)
+			System.out.println("Data is found"+i);
+		
+		else 
+			System.out.println("Data is not found");	
+		
+	}
+}
+}
+
