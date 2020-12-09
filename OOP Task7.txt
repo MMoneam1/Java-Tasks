@@ -1,0 +1,137 @@
+
+public class Student {
+
+	private String name;
+	private String email;
+	private String phone;
+	private String faculty;
+	private int[] myGrades;
+	private Grade [] studentGrade;
+
+	public Student() {
+		super();
+	}
+
+	public Student(String name, String email, String phone, String faculty, int[] myGrades) {
+		super();
+		this.name = name;
+		this.email = email;
+		this.phone = phone;
+		this.faculty = faculty;
+		this.myGrades = myGrades;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getPhone() {
+		return phone;
+	}
+
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+
+	public String getFaculty() {
+		return faculty;
+	}
+
+	public void setFaculty(String faculty) {
+		this.faculty = faculty;
+	}
+
+	public int[] getMyGrades() {
+		return myGrades;
+	}
+
+	public void setMyGrades(int[] myGrades) {
+		this.myGrades = myGrades;
+	}
+
+	public Grade[] getStudentGrade() {
+		return studentGrade;
+	}
+
+	public void setStudentGrade(Grade[] studentGrade) {
+		this.studentGrade = studentGrade;
+	}
+	
+	
+	
+	
+
+}
+----------------------------
+
+public class Grade {
+
+	private String name;
+	private String grade;
+
+	public Grade() {
+		super();
+	}
+
+	public Grade(String name, String grade) {
+		super();
+		this.name = name;
+		this.grade = grade;
+	}
+
+}
+-----------------------------------
+
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+public class StudentTest {
+
+	public static void main(String[] args) {
+
+		Scanner takeInput = new Scanner(System.in);
+		System.out.println("Please enter your name");
+		String userInput = takeInput.next();
+		System.out.println("Welcome " + userInput);
+
+		String numberOfStuString = JOptionPane.showInputDialog("Please enter number of students: ");
+		int numberOfStu = Integer.parseInt(numberOfStuString);
+
+		Student[] userData = new Student[numberOfStu];
+
+		for (int i = 0; i < userData.length; i++) {
+			String stuName = JOptionPane.showInputDialog("Please enter student Name: ");
+			String stuEmail = JOptionPane.showInputDialog("Please enter student Email: ");
+			String stuPhone = JOptionPane.showInputDialog("Please enter student Phone: ");
+			String stuFaculty = JOptionPane.showInputDialog("Please enter student Faculty: ");
+
+		String numberOfSubjectsString = JOptionPane.showInputDialog("Please enter number of subjects: ");
+		int numberOfSubjects = Integer.parseInt(numberOfSubjectsString);
+		Grade[] userGrade = new Grade[numberOfSubjects];
+		
+		for (int x = 0; x < userGrade.length; x++) {
+			String firstSubject = JOptionPane.showInputDialog("Please enter your subject: ");
+		
+		}
+		
+			
+			
+		}
+
+	}
+
+}
+
