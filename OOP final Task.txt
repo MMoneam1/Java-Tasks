@@ -1,0 +1,297 @@
+
+public abstract class Car {
+	
+	protected String carName;
+	protected String brand;
+	protected String model;
+	protected double price;
+	protected String bodyType;
+	
+    abstract void printCar();
+	
+		
+	public Car() {
+		super();
+	}
+
+	public Car(String carName, String brand, String model, double price, String bodyType) {
+		super();
+		this.carName = carName;
+		this.brand = brand;
+		this.model = model;
+		this.price = price;
+		this.bodyType = bodyType;
+	}
+
+	public String getCarName() {
+		return carName;
+	}
+
+	public void setCarName(String carName) {
+		this.carName = carName;
+	}
+
+	public String getBrand() {
+		return brand;
+	}
+
+	public void setBrand(String brand) {
+		this.brand = brand;
+	}
+
+	public String getModel() {
+		return model;
+	}
+
+	public void setModel(String model) {
+		this.model = model;
+	}
+
+	public double getPrice() {
+		return price;
+	}
+
+	public void setPrice(double price) {
+		this.price = price;
+	}
+
+	public String getBodyType() {
+		return bodyType;
+	}
+
+	public void setBodyType(String bodyType) {
+		this.bodyType = bodyType;
+	}
+	
+		
+	}
+	
+
+
+------------------------------------------------------------
+
+
+public class newCar extends Car {
+	
+	private int speed;
+	
+	
+	public newCar(int speed) {
+		super();
+		this.speed = speed;
+	}
+
+	public int getSpeed() {
+		return speed;
+	}
+
+	public void setSpeed(int speed) {
+		this.speed = speed;
+	}
+
+@Override
+void printCar() {
+	
+	System.out.println(speed);
+	
+}
+	
+}
+---------------------------------------------------------------
+
+public class usedCar extends Car {
+	
+	private int	kiloMeter;
+	private int year;
+	private String ownerName;
+	private String ownerNumber;
+	
+	
+	public usedCar(int kiloMeter, int year, String ownerName, String ownerNumber) {
+		super();
+		this.kiloMeter = kiloMeter;
+		this.year = year;
+		this.ownerName = ownerName;
+		this.ownerNumber = ownerNumber;
+	}
+	public int getKiloMeter() {
+		return kiloMeter;
+	}
+	public void setKiloMeter(int kiloMeter) {
+		this.kiloMeter = kiloMeter;
+	}
+	public int getYear() {
+		return year;
+	}
+	public void setYear(int year) {
+		this.year = year;
+	}
+	public String getOwnerName() {
+		return ownerName;
+	}
+	public void setOwnerName(String ownerName) {
+		this.ownerName = ownerName;
+	}
+	public String getOwnerNumber() {
+		return ownerNumber;
+	}
+	public void setOwnerNumber(String ownerNumber) {
+		this.ownerNumber = ownerNumber;
+	}
+	
+	@Override
+	void printCar() { 
+		System.out.println ("Car name"+carName +"\nCar brand"+brand+ "\nCar model"+model+"\nCar price"+price
+				+"\nCar body type"+bodyType+"\nCar kiloMeter"+kiloMeter +"\nCar owner name"+
+				ownerName+"\nOwner number"+ownerNumber);
+				
+	
+}	
+
+}
+
+-------------------------------------
+
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+public class testCar {
+
+	public static void main(String[] args) {
+
+		Scanner takeInput = new Scanner(System.in);
+		System.out.println("Please enter your name: ");
+		String input = takeInput.next();
+		System.out.println("Welcome " + input);
+
+		boolean validInput = false;
+		boolean validProductSelection = false;
+
+		Car[] cars = new newCar[1];
+		String userInput = JOptionPane
+				.showInputDialog("To add new car press (+) \n To sell car press ($) \n To view cars press (#) ");
+
+		while (!validInput) {
+
+			switch (userInput) {
+			case "+":
+
+				String numberOfProductsString = JOptionPane.showInputDialog("Please enter number of products: ");
+
+				int numberOfProducts = Integer.parseInt(numberOfProductsString);
+				cars = new Car[numberOfProducts];
+
+				String carName = "";
+				String brand = "";
+				String model = "";
+				double price = 0.0;
+				String bodyType = "";
+				int speed = 0;
+
+				for (int x = 0; x < cars.length; x++) {
+
+					validInput = true;
+					String productType = JOptionPane.showInputDialog("For new car press (1) \n For used car press (2)");
+
+					while (!validProductSelection) {
+
+						switch (productType) {
+
+						case "1":
+							validProductSelection = true;
+							carName = JOptionPane.showInputDialog("Please enter car Name: ");
+							brand = JOptionPane.showInputDialog("Please enter car brand: ");
+							model = JOptionPane.showInputDialog("Please enter car model: ");
+							String priceString = JOptionPane.showInputDialog("Please enter car price: ");
+							price = Double.parseDouble(priceString);
+							bodyType = JOptionPane
+									.showInputDialog("Please enter body type\n-Sedan\n-Hatchback\n-Cross over");
+							String speedString = JOptionPane.showInputDialog("Please enter car Speed: ");
+							speed = Integer.parseInt(speedString);
+							// Save data in array
+							newCar nCar = new newCar(speed);
+							nCar.setCarName(carName);
+							nCar.setBrand(brand);
+							nCar.setModel(model);
+							nCar.setPrice(price);
+							nCar.setBodyType(bodyType);
+
+							break;
+
+						case "2":
+							validProductSelection = true;
+
+							carName = JOptionPane.showInputDialog("Please enter car Name: ");
+							brand = JOptionPane.showInputDialog("Please enter car brand: ");
+							model = JOptionPane.showInputDialog("Please enter car model: ");
+							String priceString1 = JOptionPane.showInputDialog("Please enter car price: ");
+							price = Double.parseDouble(priceString1);
+							bodyType = JOptionPane
+									.showInputDialog("Please enter body type\n-Sedan\n-Hatchback\n-Cross over");
+							String kilometerString = JOptionPane.showInputDialog("Please enter car Kilo meter: ");
+							int kilometer = Integer.parseInt(kilometerString);
+							String yearString = JOptionPane.showInputDialog("Please enter model year: ");
+							int year = Integer.parseInt(yearString);
+							String ownerName = JOptionPane.showInputDialog("Please enter car Owner Name: ");
+							String ownerNumber = JOptionPane.showInputDialog("Please enter car number Name: ");
+							// next lines are important
+							usedCar uCar = new usedCar(kilometer, year, ownerName, ownerNumber);
+							uCar.setCarName(carName);
+							uCar.setBrand(brand);
+							uCar.setModel(model);
+							uCar.setPrice(price);
+							uCar.setBodyType(bodyType);
+							cars[x] = uCar;
+
+							break;
+
+						default:
+							validProductSelection = false;
+							productType = JOptionPane.showInputDialog(
+									"Pease enter valid input \n For new car press (1) \n For used car press (2)");
+							;
+							break;
+
+						}
+						break;
+					}
+				}
+
+			case "$":
+				validInput = true;
+
+				String userInputs = JOptionPane.showInputDialog("Please enter price for search: ");
+				int priceInput = Integer.parseInt(userInputs);
+				Car[] carPrice = new Car[priceInput];
+
+				if (carPrice >= price)
+					System.out.println("Items are: \n");
+
+				else
+					JOptionPane.showMessageDialog(null, "There is no cars match with this price");
+
+				break;
+
+			case "#":
+				validInput = true;
+				if (cars.length > 0)
+
+					for (int i = 0; i < cars.length; i++) {
+						cars[i].printCar();
+					}
+				else
+					JOptionPane.showMessageDialog(null, "There is no products to Show");
+
+				break;
+
+			default:
+				validInput = false;
+				userInput = JOptionPane.showInputDialog("Please enter a valid input");
+				;
+				break;
+
+			}
+		}
+	}
+}
