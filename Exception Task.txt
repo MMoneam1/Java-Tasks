@@ -1,0 +1,36 @@
+import javax.swing.JOptionPane;
+
+public class StudentGrade {
+
+	public void getUserData() {
+
+		String name = JOptionPane.showInputDialog("Please Enter your name: ");
+		String email = JOptionPane.showInputDialog("Please Enter your Email: ");
+		String phoneNumberString = JOptionPane.showInputDialog("Please Enter your Phone Number: ");
+		int phoneNumber = 0;
+		
+		System.out.println(
+				"Your Name is: " + name + "\nAYour E-mail is:" + email + "\nYour Phone Number is:" + phoneNumber);
+		
+		try {
+			phoneNumber = Integer.parseInt(phoneNumberString);
+			
+		} catch (NumberFormatException e) {
+			System.out.println("Please enter a valid number");
+		}
+
+	}
+
+}
+
+----------------------------------
+
+
+public class UserInput {
+
+	public static void main(String[] args) {
+		
+		StudentGrade StuGrade = new StudentGrade();
+		StuGrade.getUserData();
+	}
+}
